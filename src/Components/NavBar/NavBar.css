@@ -1,0 +1,101 @@
+/* NavBar.css */
+.navbar {
+    margin: 0px 50px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    font-family: Arial;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  .logo {
+    max-width: 100px;
+    float: left; /* Adjust logo size */
+  }
+  
+  .navbar-menu {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+    text-align: center;
+    color: rgb(97, 8, 240);
+    font-size: 19px;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar button {
+    background: transparent;
+    font-size: 16px;
+    color: rgb(97, 8, 240);
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+  }
+  
+  .navbar button:hover {
+    background-color: rgb(230, 244, 244);
+  }
+  
+  .navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgb(97, 8, 240);
+  }
+  
+  .navbar li {
+    cursor: pointer;
+  }
+  
+  .navbar-search-icon {
+    position: relative;
+  }
+  
+  .navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: red;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+  }
+  @media (max-width:1050px){
+    .navbar .logo{
+      width: 140px;
+    }
+    .navbar-menu{
+      gap: 20px;
+      font-size: 17px;
+
+    }
+    .nav-right{ gap: 30px;}
+    .navbar-right img{
+      width: 22px;
+    }
+    .nav-right button{
+      padding: 8px 25px;
+      width: 100px;
+      height: fit-content;
+    }
+  }
+
+
+  @media (max-width:750px){
+
+    .navbar-menu{
+    display: none;
+    }
+   
+  }
+
+  

@@ -1,0 +1,80 @@
+.header {
+    margin: 30px;
+    padding: 0; /* Remove auto padding */
+    height: 60vh; /* Adjust height to be responsive */
+    background: url('../../assets/head.jpg') no-repeat center center; /* Center the background image */
+    background-size: cover;
+    position: relative;
+}
+
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the contents vertically */
+    gap: 2vw; /* Increase the gap between elements */
+    max-width: 60%; /* Adjust maximum width */
+    bottom: 10%;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    animation: fadein 3s;
+}
+
+.header-contents h2 {
+    font-weight: 600;
+    color: rgb(246, 247, 247);
+    font-size: max(4.5vw, 28px); /* Increase font size for better readability */
+    text-align: center; /* Center the text */
+}
+
+.header-contents p {
+    font-weight: 500;
+    color: rgb(246, 244, 243);
+    font-size: max(1.5vw, 14px); /* Increase font size for better readability */
+    text-align: center; /* Center the text */
+}
+
+.header-contents button {
+    border: none;
+    color: white; /* Change button text color */
+    background-color: rgb(15, 172, 224); /* Change button background color */
+    padding: 1vw 3vw; /* Adjust padding */
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
+    cursor: pointer; /* Add pointer cursor */
+    transition: background-color 0.3s; /* Add transition for smoother hover effect */
+}
+
+.header-contents button:hover {
+    background-color: rgb(4, 129, 178); /* Darken button background color on hover */
+}
+
+/* Add keyframes for fadein animation */
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1050px) {
+    .header {
+        height: 50vh; /* Adjust height for smaller screens */
+    }
+    .header-contents {
+        max-width: 70%; /* Adjust maximum width for smaller screens */
+    }
+}
+
+@media (max-width: 750px) {
+    .header {
+        height: 40vh; /* Adjust height for even smaller screens */
+    }
+    .header-contents {
+        max-width: 80%; /* Adjust maximum width for even smaller screens */
+    }
+}
