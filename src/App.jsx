@@ -14,9 +14,9 @@ const App = () => {
       { showLogin ? <LoignPopup setShowLogin={setShowLogin}/> : <></>}
       <NavBar setShowLogin={setShowLogin}/>
       <Routes>
-        <Route path="/" element={<Home/>} />   
-        <Route path='/cart' element={<Cart />} />
-        <Route path='/order' element={<PlaceOrder />} />
+        <Route path="/Food-ing" element={<Home/>} />   
+        <Route path='/Food-ing/cart' element={<Cart />} />
+        <Route path='/Food-ing/order' element={<PlaceOrder />} />
       </Routes>
     </div>
   );
