@@ -17,12 +17,12 @@ const NavBar = ({ setShowLogin }) => {
   return (
     <div>
       <div className="navbar">
-        <Link to="/">
+        <Link to="/Food-ing">
           <img src={assets.logo} className="logo" />
         </Link>
         <ul className={`navbar-menu ${menuOpen ? "active" : ""}`}>
           <Link
-            to="/"
+            to="/Food-ing"
             onClick={() => {
               setMenu("home");
               toggleMenu();
@@ -64,7 +64,7 @@ const NavBar = ({ setShowLogin }) => {
         </ul>
         <div className="navbar-right">
           <div className="navbar-search-icon">
-            <Link to="/cart">
+            <Link to="/Food-ing/cart">
               <img src={assets.basket_icon} />
             </Link>
             <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>

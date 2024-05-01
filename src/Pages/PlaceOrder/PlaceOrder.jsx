@@ -41,7 +41,7 @@ const PlaceOrder = () => {
             </div>
             <hr />
           </div>
-          <button onClick={"/"}>Proceed to payment</button>
+          <button onClick={"/Food-ing"}>Proceed to payment</button>
         </div>
       </div>
     </form>

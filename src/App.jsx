@@ -4,19 +4,19 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Cart from './Pages/Cart/Cart';
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
-import LoignPopup from './Components/LoginPopup/LoignPopup.jsx';
+import LoginPopup from './Components/LoginPopup/LoignPopup.jsx';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
 
   return (
     <div className='app'>
-      { showLogin ? <LoignPopup setShowLogin={setShowLogin}/> : <></>}
+      { showLogin ? <LoginPopup setShowLogin={setShowLogin}/> : <></>}
       <NavBar setShowLogin={setShowLogin}/>
       <Routes>
-        <Route path="/" element={<Home/>} />   
-        <Route path='/cart' element={<Cart />} />
-        <Route path='/order' element={<PlaceOrder />} />
+        <Route path="/Food-ing" element={<Home/>} />   
+        <Route path='/Food-ing/cart' element={<Cart />} />
+        <Route path='/Food-ing/order' element={<PlaceOrder />} />
       </Routes>
     </div>
   );

@@ -1,53 +1,46 @@
 .header {
-    margin: 30px;
-    padding: 0; /* Remove auto padding */
-    height: 60vh; /* Adjust height to be responsive */
-    background: url('../../assets/head.jpg') no-repeat center center; /* Center the background image */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('../../assets/head.jpg') no-repeat center center;
     background-size: cover;
     position: relative;
 }
 
 .header-contents {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Center the contents vertically */
-    gap: 2vw; /* Increase the gap between elements */
-    max-width: 60%; /* Adjust maximum width */
-    bottom: 10%;
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
-    animation: fadein 3s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
 }
 
 .header-contents h2 {
     font-weight: 600;
-    color: rgb(246, 247, 247);
-    font-size: max(4.5vw, 28px); /* Increase font size for better readability */
-    text-align: center; /* Center the text */
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive font size */
+    margin-bottom: 1rem;
 }
 
 .header-contents p {
-    font-weight: 500;
-    color: rgb(246, 244, 243);
-    font-size: max(1.5vw, 14px); /* Increase font size for better readability */
-    text-align: center; /* Center the text */
+    font-weight: 400;
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+    margin-bottom: 2rem;
 }
 
 .header-contents button {
     border: none;
-    color: white; /* Change button text color */
-    background-color: rgb(15, 172, 224); /* Change button background color */
-    padding: 1vw 3vw; /* Adjust padding */
-    font-size: max(1vw, 13px);
+    color: #fff;
+    background-color: #0facdf;
+    padding: 1rem 2rem;
+    font-size: clamp(0.8rem, 1.5vw, 1rem); /* Responsive font size */
     border-radius: 50px;
-    cursor: pointer; /* Add pointer cursor */
-    transition: background-color 0.3s; /* Add transition for smoother hover effect */
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .header-contents button:hover {
-    background-color: rgb(4, 129, 178); /* Darken button background color on hover */
+    background-color: #0481b2;
 }
 
 /* Add keyframes for fadein animation */
@@ -62,19 +55,21 @@
 
 /* Media query for smaller screens */
 @media (max-width: 1050px) {
-    .header {
-        height: 50vh; /* Adjust height for smaller screens */
+    .header-contents h2 {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
     }
-    .header-contents {
-        max-width: 70%; /* Adjust maximum width for smaller screens */
+
+    .header-contents p {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+    }
+
+    .header-contents button {
+        font-size: clamp(0.8rem, 3vw, 1rem);
     }
 }
 
 @media (max-width: 750px) {
-    .header {
-        height: 40vh; /* Adjust height for even smaller screens */
-    }
     .header-contents {
-        max-width: 80%; /* Adjust maximum width for even smaller screens */
+        max-width: 80%;
     }
 }
